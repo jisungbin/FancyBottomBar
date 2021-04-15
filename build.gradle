@@ -1,0 +1,32 @@
+buildscript {
+    ext {
+        compose_version = '1.0.0-beta01'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.0-alpha12"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

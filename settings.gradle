@@ -1,0 +1,2 @@
+include ':app', ':FancyBottomBar'
+rootProject.name = 'FancyBottomBar'
