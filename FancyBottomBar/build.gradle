@@ -54,3 +54,4 @@ dependencies {
 }
 
 group = 'com.github.jisungbin'
+version = '0.0.2'
