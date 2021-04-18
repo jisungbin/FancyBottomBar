@@ -5,12 +5,12 @@
 
 -----
 
-### Download? [[Here.]](https://github.com/jisungbin/FancyBottomBar/tree/master/FancyBottomBar/src/main/java/me/sungbin/fancybottombar)
+# Download? [[Here.]](https://github.com/jisungbin/FancyBottomBar/tree/master/FancyBottomBar/src/main/java/me/sungbin/fancybottombar)
 
 # Todo
 - [ ] fancy animation
 
-## Full-example
+# Full-example
 ```kotlin
 class MainActivity : ComponentActivity() {
 
