@@ -57,11 +57,6 @@ fun FancyBottomBar(
         verticalAlignment = Alignment.CenterVertically
     ) {
         items.forEach { item ->
-            /*val isFocusedItem: Boolean
-                get() {
-                    fancyItemStatue == item.id
-                }*/ // todo: Why need import?????? What`s current import for `get` property????
-
             val fancyItemColor by animateColorAsState(if (fancyItemState == item.id) fancyColors.primary else fancyColors.indicatorBackground)
 
             Box(
