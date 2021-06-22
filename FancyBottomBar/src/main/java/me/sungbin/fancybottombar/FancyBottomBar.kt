@@ -24,29 +24,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 
-/**
- * Created by Ji Sungbin on 2021/04/15.
- */
-
-private interface FancyItemListener {
-    fun onItemChanged(item: FancyItem)
-}
-
-private var listener: FancyItemListener? = null
-
 @Composable
 fun FancyBottomBar(
     fancyColors: FancyColors = FancyColors(),
     fancyOptions: FancyOptions = FancyOptions(),
     items: List<FancyItem>,
-    action: FancyItem.() -> Unit
+    onItemChanged: FancyItem.() -> Unit
 ) {
-    listener = object : FancyItemListener {
-        override fun onItemChanged(item: FancyItem) {
-            action(item)
-        }
-    }
-
     var fancyItemState by remember { mutableStateOf(items.first().id) }
 
     Row(
@@ -64,7 +48,7 @@ fun FancyBottomBar(
                     .weight(1f)
                     .clickable {
                         fancyItemState = item.id
-                        listener?.onItemChanged(item)
+                        onItemChanged(item)
                     }
             ) {
                 Spacer(
