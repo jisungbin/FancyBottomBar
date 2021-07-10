@@ -17,7 +17,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        SystemUiController(window).setSystemBarsColor(colors.primary)
         val items = listOf(
             FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
             FancyItem(icon = R.drawable.ic_baseline_error_24, id = 1),
