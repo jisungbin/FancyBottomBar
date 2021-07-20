@@ -1,3 +1,11 @@
+/*
+* FancyBottomBar created by Ji Sungbin
+* FancyBottomBar license is under the MIT license.
+* Please see: https://github.com/jisungbin/FancyBottomBar/blob/master/LICENSE
+*/
+
+package me.sungbin.fancybottombar
+
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -23,7 +31,7 @@ import androidx.compose.ui.res.painterResource
 
 @Composable
 fun FancyBottomBar(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     fancyColors: FancyColors = FancyColors(),
     fancyOptions: FancyOptions = FancyOptions(),
     items: List<FancyItem>,

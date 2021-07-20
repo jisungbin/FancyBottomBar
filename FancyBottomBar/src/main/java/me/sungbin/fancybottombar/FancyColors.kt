@@ -1,13 +1,15 @@
+/*
+* FancyBottomBar created by Ji Sungbin
+* FancyBottomBar license is under the MIT license.
+* Please see: https://github.com/jisungbin/FancyBottomBar/blob/master/LICENSE
+*/
+
 package me.sungbin.fancybottombar
 
 import androidx.compose.ui.graphics.Color
 
-/**
- * Created by Ji Sungbin on 2021/04/15.
- */
-
-class FancyColors(
-    var background: Color = Color.White,
-    var indicatorBackground: Color = Color.LightGray,
-    var primary: Color = Color.Blue
+data class FancyColors(
+    val background: Color = Color.White,
+    val indicatorBackground: Color = Color.LightGray,
+    val primary: Color = Color.Blue
 )
