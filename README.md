@@ -2,7 +2,7 @@
 
 # FancyBottomBar [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.jisungbin/fancybottombar/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.jisungbin/fancybottombar)
 
-An awesome fancy bottom-bar library for jetpack compose.
+An awesome fancy bottom-bar library for Jetpack Compose.
 
 -----
 
