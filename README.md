@@ -8,7 +8,7 @@ An awesome fancy bottom-bar library for Jetpack Compose.
 
 # Download
 ```groovy
-implementation "io.github.jisungbin:fancybottombar:1.0.0"
+implementation "io.github.jisungbin:fancybottombar:${version}"
 ```
 
 # Usage
