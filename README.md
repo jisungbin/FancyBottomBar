@@ -13,4 +13,6 @@ implementation 'io.github.jisungbin:fancybottombar:1.0.0"
 # Usage
 // todo
 
-# Happy Codding :)
+---
+
+# 🤗 Happy Coding :)
