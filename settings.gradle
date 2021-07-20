@@ -1,2 +1,2 @@
-include ':app', ':FancyBottomBar'
+include ':app', ':fancybottombar'
 rootProject.name = 'FancyBottomBar'
