@@ -1,7 +1,8 @@
 <img src="FancyBottomBar.gif" width="33%" align="right"/>
 
-# FancyBottomBar
-> An awesome fancy bottom-bar library for **jetpack compose**.
+# FancyBottomBar [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.jisungbin/fancybottombar/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.jisungbin/fancybottombar)
+
+> An awesome fancy bottom-bar library for jetpack compose.
 
 -----
 
