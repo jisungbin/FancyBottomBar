@@ -49,14 +49,12 @@ data class FancyItem(
 
 ```kotlin
 setContent {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(bottom = 80.dp) // 80dp: FancyBottomBar default height(60.dp) + bottom margin(20.dp)
-    ) {
+    Box(modifier = Modifier.fillMaxSize()) {
         Crossfade(
     	    targetState = fancyNavigationState.value,
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()           
+                .padding(bottom = 80.dp) // 80dp: FancyBottomBar default height(60.dp) + bottom margin(20.dp)
         ) { index ->
             Text(text = "\uD83C\uDF1F Awesome FancyBottomBar \uD83C\uDF1F\nPage index: $index")
         }
