@@ -78,22 +78,22 @@ setContent {
 #### FancyColor
 
 ```kotlin
-data class FancyColors(
-    val background: Color = Color.White,
-    val indicatorBackground: Color = Color.LightGray,
-    val primary: Color = Color.Blue
-)
+fun FancyColors(
+    background: Color = Color.White,
+    indicatorBackground: Color = Color.LightGray,
+    primary: Color = Color.Blue
+): FancyColors
 ```
 
 #### FancyOptions
 
 ```kotlin
-data class FancyOptions(
-    val fontFamily: FontFamily = FontFamily.Default,
-    val indicatorHeight: Dp = 1.dp,
-    val barHeight: Dp = 60.dp,
-    val titleTopPadding: Dp = 4.dp
-)
+fun FancyOptions(
+    fontFamily: FontFamily = FontFamily.Default,
+    indicatorHeight: Dp = 1.dp,
+    barHeight: Dp = 60.dp,
+    titleTopPadding: Dp = 4.dp
+): FancyOptions
 ```
 
 
