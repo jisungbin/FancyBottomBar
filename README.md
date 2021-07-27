@@ -49,27 +49,31 @@ class FancyItem(
 
 ```kotlin
 setContent {
-  Box(modifier = Modifier.fillMaxSize().padding(bottom = 80.dp)) { // 80dp: FancyBottomBar default height(60.dp) + bottom margin(20.dp)
-    Crossfade(
-    	targetState = fancyNavigationState.value,
-      modifier = Modifier.fillMaxSize()
-    ) { index ->
-      Text(text = "\uD83C\uDF1F Awesome FancyBottomBar \uD83C\uDF1F\nPage index: $index")
-    }
-    Column(
-    	modifier = Modifer.fillMaxSize(),
-      verticalArrangement = Arrangement.Bottom
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(bottom = 80.dp) // 80dp: FancyBottomBar default height(60.dp) + bottom margin(20.dp)
     ) {
-      FancyBottomBar(
-        modifier = Modifier,
-    		fancyColors = FancyColors(),
-    		fancyOptions = FancyOptions(),
-        items = items
-      ) {
-        fancyNavigationState.value = id
-      }
+        Crossfade(
+    	    targetState = fancyNavigationState.value,
+            modifier = Modifier.fillMaxSize()
+        ) { index ->
+            Text(text = "\uD83C\uDF1F Awesome FancyBottomBar \uD83C\uDF1F\nPage index: $index")
+        }
+        Column(
+    	    modifier = Modifer.fillMaxSize(),
+            verticalArrangement = Arrangement.Bottom
+        ) {
+            FancyBottomBar(
+                modifier = Modifier,
+    		    fancyColors = FancyColors(),
+    		    fancyOptions = FancyOptions(),
+                items = items
+            ) {
+                fancyNavigationState.value = id
+            }
+        }
     }
-  }
 }
 ```
 
