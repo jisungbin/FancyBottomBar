@@ -26,7 +26,7 @@ val fancyNavigationState = remember { mutableStateOf(0) }
 
 ```kotlin
 val items = listOf(
-FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
+    FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
 	FancyItem(icon = R.drawable.ic_baseline_error_24, id = 1),
 	FancyItem(title = "Keys", icon = R.drawable.ic_baseline_vpn_key_24, id = 2),
  	FancyItem("More?", id = 3)
@@ -36,11 +36,10 @@ FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
 #### FancyItem
 
 ```kotlin
-val items = listOf(
-    FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
-	FancyItem(icon = R.drawable.ic_baseline_error_24, id = 1),
-	FancyItem(title = "Keys", icon = R.drawable.ic_baseline_vpn_key_24, id = 2),
- 	FancyItem("More?", id = 3)
+data class FancyItem(
+    val title: String = "", 
+    @DrawableRes val icon: Int? = null,
+    val id: Int = 0
 )
 ```
 
