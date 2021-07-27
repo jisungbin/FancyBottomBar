@@ -36,10 +36,11 @@ FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
 #### FancyItem
 
 ```kotlin
-class FancyItem(
-  val title: String = "",
-  @DrawableRes val icon: Int? = null, 
-  val id: Int = 0
+val items = listOf(
+    FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
+	FancyItem(icon = R.drawable.ic_baseline_error_24, id = 1),
+	FancyItem(title = "Keys", icon = R.drawable.ic_baseline_vpn_key_24, id = 2),
+ 	FancyItem("More?", id = 3)
 )
 ```
 
@@ -80,7 +81,7 @@ setContent {
 #### FancyColor
 
 ```kotlin
-class FancyColors(
+data class FancyColors(
     val background: Color = Color.White,
     val indicatorBackground: Color = Color.LightGray,
     val primary: Color = Color.Blue
@@ -90,7 +91,7 @@ class FancyColors(
 #### FancyOptions
 
 ```kotlin
-class FancyOptions(
+data class FancyOptions(
     val fontFamily: FontFamily = FontFamily.Default,
     val indicatorHeight: Dp = 1.dp,
     val barHeight: Dp = 60.dp,
