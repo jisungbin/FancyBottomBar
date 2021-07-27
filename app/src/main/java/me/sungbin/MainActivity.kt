@@ -18,7 +18,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import me.sungbin.fancybottombar.FancyBottomBar
+import me.sungbin.fancybottombar.FancyColors
 import me.sungbin.fancybottombar.FancyItem
+import me.sungbin.fancybottombar.FancyOptions
 
 class MainActivity : ComponentActivity() {
 
@@ -35,10 +37,14 @@ class MainActivity : ComponentActivity() {
         val fancyNavigationState = mutableStateOf(0)
 
         setContent {
-            Box(modifier = Modifier.fillMaxSize()) {
+            Box(
+                modifier = Modifier.fillMaxSize()
+            ) {
                 Crossfade(
                     fancyNavigationState.value,
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 80.dp)
                 ) { index ->
                     BindFancyPage(index = index)
                 }
@@ -46,7 +52,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     verticalArrangement = Arrangement.Bottom
                 ) {
-                    FancyBottomBar(items = items) {
+                    FancyBottomBar(
+                        items = items,
+                        fancyColors = FancyColors(),
+                        fancyOptions = FancyOptions()
+                    ) {
                         fancyNavigationState.value = id
                     }
                 }
@@ -57,9 +67,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     private fun BindFancyPage(index: Int) {
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(bottom = 80.dp),
+            modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
