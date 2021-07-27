@@ -26,7 +26,7 @@ val fancyNavigationState = remember { mutableStateOf(0) }
 
 ```kotlin
 val items = listOf(
-	FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
+FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
 	FancyItem(icon = R.drawable.ic_baseline_error_24, id = 1),
 	FancyItem(title = "Keys", icon = R.drawable.ic_baseline_vpn_key_24, id = 2),
  	FancyItem("More?", id = 3)
@@ -49,7 +49,7 @@ class FancyItem(
 
 ```kotlin
 setContent {
-  Box(modifier = Modifier.fillMaxSize().padding(bottom = 80.dp)) { // 80dp: FancyBottomBar default height.
+  Box(modifier = Modifier.fillMaxSize().padding(bottom = 80.dp)) { // 80dp: FancyBottomBar default height(60.dp) + bottom margin(20.dp)
     Crossfade(
     	targetState = fancyNavigationState.value,
       modifier = Modifier.fillMaxSize()
