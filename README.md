@@ -27,9 +27,9 @@ val fancyNavigationState = remember { mutableStateOf(0) }
 ```kotlin
 val items = listOf(
     FancyItem("Folders", R.drawable.ic_baseline_folder_24, 0),
-	FancyItem(icon = R.drawable.ic_baseline_error_24, id = 1),
-	FancyItem(title = "Keys", icon = R.drawable.ic_baseline_vpn_key_24, id = 2),
- 	FancyItem("More?", id = 3)
+    FancyItem(icon = R.drawable.ic_baseline_error_24, id = 1),
+    FancyItem(title = "Keys", icon = R.drawable.ic_baseline_vpn_key_24, id = 2),
+    FancyItem("More?", id = 3)
 )
 ```
 
@@ -66,8 +66,8 @@ setContent {
         ) {
             FancyBottomBar(
                 modifier = Modifier,
-    		    fancyColors = FancyColors(),
-    		    fancyOptions = FancyOptions(),
+    		fancyColors = FancyColors(),
+    		fancyOptions = FancyOptions(),
                 items = items
             ) {
                 fancyNavigationState.value = id
